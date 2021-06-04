@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/joho/godotenv"
+	"github.com/mrzdtydlntm/golang_backend/entity"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
@@ -27,7 +28,7 @@ func SetupDatabaseConnection() *gorm.DB {
 		panic("Failed to create a connection to database")
 	}
 	//untuk isi model
-	// db.AutoMigrate()
+	db.AutoMigrate(&entity.Book{}, &entity.User{})
 	return db
 }
 
