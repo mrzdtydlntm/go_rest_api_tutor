@@ -1,2 +1,2 @@
 # RESTful API GO
-## Using Clean Architecture
+## Using Gin, Gorm and MySQL
